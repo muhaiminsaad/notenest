@@ -2,7 +2,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const path = require("path");
 const bcrypt = require("bcrypt");
 const pool = require("./db");
 const sessionMiddleware = require("./session");
@@ -17,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(express.json({ limit: "100kb" }));
 app.use(sessionMiddleware);
-app.use(express.static(path.join(__dirname, "public")));
 
 // Check whether a user is logged in
 function requireAuth(req, res, next) {
