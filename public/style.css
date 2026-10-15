@@ -1,0 +1,183 @@
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    padding: 24px 16px;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #666;
+}
+
+main {
+    width: min(800px, 100%);
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000008;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.auth-tabs button {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form h2 {
+    margin: 0 0 8px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #8bb8f5;
+    border-color: #2459a9;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2459a9;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #194582;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.hint {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+#authMessage,
+#noteMessage {
+    overflow-wrap: anywhere;
+}
+
+.account-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.account-bar p {
+    overflow-wrap: anywhere;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.notes-section {
+    margin-top: 28px;
+}
+
+.note {
+    margin-bottom: 14px;
+    padding: 18px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+}
+
+.note h3 {
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.note p {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.note-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.note-actions .delete-button {
+    background: #b42318;
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 18px auto;
+        padding: 0 12px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .account-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
